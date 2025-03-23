@@ -1,0 +1,119 @@
+body{
+    background-color: #94bddd;
+
+}
+nav{
+    position: fixed;
+}
+.navbar {
+    background: linear-gradient(45deg, #f8f9fa, #a2bdd1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    max-width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: #2d3436 !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0984e3;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #0984e3 !important;
+}
+
+.btn-primary {
+    border: none;
+    padding: 8px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.light {
+    background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 4rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.light .row {
+    align-items: center;
+}
+
+.light h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2d3436;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.light p {
+    font-size: 1.1rem;
+    color: #636e72;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 85%;
+}
+
+.light img {
+    border-radius: 20px;
+    width: 100%;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* Bouton supplémentaire optionnel */
+.cta-button {
+    background: #0984e3 ;
+    color: white !important;
+    padding: 12px 35px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  
+
