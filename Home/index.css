@@ -1,14 +1,15 @@
-body{
-    background-color: #94bddd;
-
-}
-nav{
-    position: fixed;
+body {
+    padding-top: 70px; /* Ajusté selon la hauteur de la navbar */
 }
 .navbar {
     background: linear-gradient(45deg, #f8f9fa, #a2bdd1);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
 }
 
 .logo {
@@ -57,7 +58,7 @@ nav{
 }
 .light {
     background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
-    padding: 4rem 0;
+    padding: 10rem 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -114,6 +115,293 @@ nav{
       transform: translateY(-20px);
     }
   }
-  
-  
+  #collection-container {
+    padding: 4rem 1rem;
+    background: linear-gradient(45deg, #f8f9fa, #a2bdd1);
+    text-align: center;
+}
+
+#collection-container h1 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+#collection-items-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row; /* Direction par défaut en ligne */
+}
+
+.collection-item {
+    width: 160px;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.collection-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.collection-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #4b4bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: background-color 0.3s ease;
+}
+
+
+.collection-icon svg {
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.collection-name {
+    font-size: 1.1rem;
+    color: #2d3436;
+    font-weight: 500;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+
+
+.product-section-container {
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.product-section-container h1 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+    position: relative; /* Nécessaire pour le positionnement absolu du pseudo-élément */
+    display: inline-block; /* Pour que la ligne s'adapte à la longueur du texte */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.product-section-container h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px; /* Ajustement de la position verticale */
+    transform: translateX(-50%); /* Centrage horizontal */
+    width:140px; /* Largeur de la ligne */
+    height: 2px;
+    background-color: #0984e3;
+}
+
+.product-section-container p {
+    color: #636e72;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.Product-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    flex: 1 1 30%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.Product-item:hover img{
+    transform: scale(0.7);
+}
+
+.Product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.Product-item p {
+    color: #2d3436;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.content li{
+    font-weight: bold;
+    color: #4b4bff;
+    font-size: 1.2rem;
+}
+
+.content a {
+    background-color: #4b4bff;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.content a:hover {
+    background-color: #3636ff;
+}
+.promo-container {
+    padding: 2rem 0;
+    background: linear-gradient(45deg, #f8f9fa, #a2bdd1);
+}
+
+.promo-container .row {
+    align-items: center;
+    min-height: 500px;
+}
+
+.promo-container img:hover {
+    transform: scale(1.02);
+}
+
+.promo-container h4 {
+    color: #0984e3;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.promo-container h2 {
+    font-size: 2.8rem;
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.promo-container p {
+    color: #636e72;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0984e3 0%, #0765b0 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(9, 132, 227, 0.3);
+}
+
+
+@media (max-width: 768px) {
+    .product-collection {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Product-item {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .content li {
+        width: 100%;
+        text-align: center;
+    }
+    #collection-items-wrapper {
+        flex-direction: column; /* Passage en colonne sur mobile */
+        align-items: center; /* Centrage des éléments */
+    }
+    .product-section-container {
+        padding: 3rem 0;
+    }
+    
+   
+    
+    .collection-item {
+        width: 70%; /* Largeur adaptée aux petits écrans */
+        max-width: 250px; /* Limite la largeur maximale */
+    }
+}
+@media (max-width: 992px) {
+    .navbar {
+        position: static;
+        padding: 0.5rem 0;
+    }
+    
+    body {
+        padding-top: 0;
+    }
+    
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .light {
+        padding-top: 2rem !important;
+    }
+}
+
+/* Amélioration du toggle */
+.navbar-toggler {
+    border: none;
+    margin-right: 1rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 
