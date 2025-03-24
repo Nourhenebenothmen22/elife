@@ -2,7 +2,7 @@ body {
     padding-top: 70px; /* Ajusté selon la hauteur de la navbar */
 }
 .navbar {
-    background: linear-gradient(45deg, #f8f9fa, #a2bdd1);
+    background: linear-gradient(45deg, #f8f9fa, #5485aa);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
     top: 0;
@@ -58,7 +58,7 @@ body {
 }
 .light {
     background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
-    padding: 10rem 0;
+    padding: 8rem 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -283,7 +283,7 @@ body {
 }
 .promo-container {
     padding: 2rem 0;
-    background: linear-gradient(45deg, #f8f9fa, #a2bdd1);
+    background-color: #f8f9fa;
 }
 
 .promo-container .row {
@@ -371,6 +371,28 @@ body {
         width: 70%; /* Largeur adaptée aux petits écrans */
         max-width: 250px; /* Limite la largeur maximale */
     }
+}
+footer {
+    background: linear-gradient(45deg, #5f7e9e, #184a70);
+    color: #ffffff;
+    padding: 4rem 0 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer img {
+    max-width: 150px;
+    margin: 0 auto 3rem;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+footer .contact-box,
+footer .social-box,
+footer .newsletter-box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
 }
 @media (max-width: 992px) {
     .navbar {
